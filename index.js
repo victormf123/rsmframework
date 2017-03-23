@@ -12,8 +12,9 @@ const app = express();
 app.get('/', function (req, res) {
     res.send('Hello World!')
 });
+const PORT = process.env.PORT || 8080;
 
-const server = app.listen(8080, function () {
+const server = app.listen(PORT, function () {
         const host = server.address().address;
 const port = server.address().port;
 
